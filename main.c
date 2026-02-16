@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/02/16 09:42:11 by varandri          #+#    #+#             */
-/*   Updated: 2026/02/16 15:24:09 by varandri         ###   ########.fr       */
+/*   Created: 2026/02/16 14:08:14 by varandri          #+#    #+#             */
+/*   Updated: 2026/02/16 14:10:31 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include <unistd.h>
 
-char *get_next_line(int fd)
+int	main(void)
 {
-	char	*buff;
+	char res;
 	
-	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, buff, 0) < 0)
-		return (NULL);
-	read(fd, buff, BUFFER_SIZE);
+	res = get_next_line(1);	
 }
