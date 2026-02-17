@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/16 09:42:04 by varandri          #+#    #+#             */
-/*   Updated: 2026/02/16 17:07:39 by varandri         ###   ########.fr       */
+/*   Updated: 2026/02/17 13:34:39 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,10 +85,7 @@ char	*ft_substr(char *s, size_t start, size_t len)
 	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))
-	{
-		sb = ft_calloc(1, sizeof(char));
-		return (sb);
-	}
+		return (NULL);
 	if (len > ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
 	sb = (char *)ft_calloc ((len + 1), sizeof(char));
