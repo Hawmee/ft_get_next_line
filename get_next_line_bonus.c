@@ -6,7 +6,7 @@
 /*   By: varandri <varandri@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/18 14:45:58 by varandri          #+#    #+#             */
-/*   Updated: 2026/02/18 15:21:41 by varandri         ###   ########.fr       */
+/*   Updated: 2026/02/18 17:17:04 by varandri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ char	*get_next_line_bonus(int fd)
 	static char	*stash[1024];
 	char		*line;
 
-	if (BUFFER_SIZE <= 0 || fd < 0)
+	if (BUFFER_SIZE <= 0 || fd < 0 || fd > 1024)
 		return (NULL);
 	stash[fd] = get_all_lines_bonus(fd, stash[fd]);
 	if (!stash[fd])
